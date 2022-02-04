@@ -13,6 +13,9 @@
             <h1>Welcome to SQL Project</h1>
         </header>	
     <main>
+        <div>
+            <p><a href='home.php'>>Go to Home<</a></p>	
+        </div>
 <?php 
         include_once('footer.php');
 ?>
