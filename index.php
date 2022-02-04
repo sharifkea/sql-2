@@ -13,6 +13,25 @@
             <h1>Welcome to SQL Project</h1>
         </header>	
     <main>
+<?php
+        if (isset($_POST['txtUser'])){
+            if($_POST['txtUser']=='admin'){
+                if($_POST['password']=='admin'){
+                    header('Location: home.php');
+                }else{
+                    echo "<div>
+                      <p>Password is incorrect.</p>
+                      <p><a href='index.php'>Try Again</a></p>
+                    </div>";
+                }
+            }else{
+              echo "<div>
+                      <p>User Name is incorrect.</p>
+                      <p><a href='index.php'>Try Again</a></p>
+                    </div>";
+            }
+        }else{
+?>
         <div class ="form">
             <form action="" method="POST" name="login" >                        
                 <input id="username" placeholder="User Name" type="text" name="txtUser"  required tabindex="1"><br>
@@ -21,6 +40,7 @@
             </form>                    
         </div>
 <?php 
+        }
         include_once('footer.php');
 ?>
 
