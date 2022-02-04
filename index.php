@@ -13,8 +13,9 @@
             <h1>Welcome to SQL Project</h1>
         </header>	
     <main>
-    </body>
-</html>
+<?php 
+        include_once('footer.php');
+?>
 
       
       
